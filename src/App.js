@@ -1,23 +1,23 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import EntryForm from './EntryForm';
+import Error from './Error';
+import List from './List';
 
 function App() {
+
+  const [names, setNames] = useState([]);
+  const [error, setError] = useState('');
+  
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <EntryForm names={names} setNames={setNames} setError={setError} />
+      { error.length > 0 ? <Error error={error} /> : <br/> }
+      <List names={names} />
     </div>
   );
 }

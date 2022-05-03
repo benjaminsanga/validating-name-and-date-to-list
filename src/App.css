@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+input, button {
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.error {
+  padding: 10px;
+  background-color: grey;
+  border: 1px solid red;
+  border-radius: 5px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.list {
+  padding: 10px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.list ul li {
+  margin: 0;
+  padding: 0;
+}
+
+
